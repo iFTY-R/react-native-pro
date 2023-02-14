@@ -61,12 +61,7 @@ export function HeaderBackBtn({ navigation }: any) {
   return (
     <TouchableOpacity
       onPress={() => navigation?.canGoBack() && navigation?.goBack()}>
-      <Icon
-        name="arrowleft"
-        type="antdesign"
-        size={20}
-        tvParallaxProperties={undefined}
-      />
+      <Icon name="arrowleft" type="antdesign" size={20} />
     </TouchableOpacity>
   );
 }
