@@ -9,7 +9,8 @@
     "build:preview:android": "eas build --platform android --profile preview",
     "ios": "adb.exe devices && expo start --ios",
     "web": "adb.exe devices && expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "updae:dependency": "yarn upgrade-interactive --latest"
   },
   "jest": {
     "preset": "jest-expo"
