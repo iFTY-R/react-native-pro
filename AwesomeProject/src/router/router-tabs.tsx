@@ -35,7 +35,7 @@ export default function RouterTabs(props: any) {
   return (
     <>
       <Tab.Navigator
-        initialRouteName="Settings"
+        initialRouteName="RouterStack"
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName = '';

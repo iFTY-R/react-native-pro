@@ -40,15 +40,6 @@ function ProfileUser({ userId }: any) {
     </View>
   );
 }
-function GoToButton({ screenName }: any) {
-  const navigation = useNavigation();
-  return (
-    <Button
-      title={`Go to ${screenName}`}
-      onPress={() => navigation.navigate(screenName)}
-    />
-  );
-}
 
 export default function PageNavigationDemo({ route, navigation }: any) {
   // 手动添加监听器
@@ -135,9 +126,6 @@ export default function PageNavigationDemo({ route, navigation }: any) {
           <Text style={styles.btnText}>返回到首页{route.params?.count}</Text>
         </TouchableOpacity>
         <ProfileUser userId={123} />
-      </View>
-      <View>
-        <GoToButton />
       </View>
       <View>
         {route.params ? (

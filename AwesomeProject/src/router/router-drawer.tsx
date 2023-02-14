@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button, Linking, Text, View} from 'react-native';
+import { Button, Linking, Text, View } from 'react-native';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
@@ -8,13 +8,13 @@ import {
   useDrawerStatus,
 } from '@react-navigation/drawer';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {useEffect} from 'react';
-import {videoList} from '../view/VideoPlayer/data';
-import {VideoPlayer} from '../view/VideoPlayer/Demo';
+import { useEffect } from 'react';
+import { videoList } from '../view/VideoPlayer/data';
+import { VideoPlayer } from '../view/VideoPlayer/Demo';
 
 const LeftDrawer = createDrawerNavigator();
 
-function HomeScreen({navigation}: any) {
+function HomeScreen({ navigation }: any) {
   const drawerStatus = useDrawerStatus();
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function HomeScreen({navigation}: any) {
   }, [navigation]);
 
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
         onPress={() => navigation.navigate('Notifications')}
         title="Go to notifications"
@@ -48,9 +48,9 @@ function HomeScreen({navigation}: any) {
   );
 }
 
-function NotificationsScreen({navigation}: any) {
+function NotificationsScreen({ navigation }: any) {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button onPress={() => navigation.goBack()} title="Go back home" />
     </View>
   );
@@ -101,13 +101,13 @@ const RightDrawer = createDrawerNavigator();
 const RightDrawerScreen = () => {
   return (
     <RightDrawer.Navigator
-      screenOptions={{drawerPosition: 'right', headerShown: false}}>
+      screenOptions={{ drawerPosition: 'right', headerShown: false }}>
       <RightDrawer.Screen
         name="RightDrawerHome"
         component={HomeScreen}
         options={{
           title: 'RightDrawerHome',
-          drawerIcon: ({focused, color, size}) => (
+          drawerIcon: ({ focused, color, size }) => (
             <Ionicons name={'home'} size={size} color={color} />
           ),
         }}
@@ -116,7 +116,7 @@ const RightDrawerScreen = () => {
         name="Notifications"
         component={NotificationsScreen}
       />
-      <RightDrawer.Screen name="视频-1" component={VideoPlayer} />
+      {/*<RightDrawer.Screen name="视频-1" component={VideoPlayer} />*/}
       {/*<RightDrawer.Screen name="视频-2" component={VideoPlayer2} />*/}
       {/*<RightDrawer.Screen name="视频-3" component={VideoPlayer3} />*/}
       {/*<RightDrawer.Screen name="视频-4" component={VideoPlayer4} />*/}
