@@ -4,7 +4,9 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "adb.exe devices && expo start",
+    "start:tunnel": "adb.exe devices && expo start --tunnel",
     "android": "adb.exe devices && expo start --android",
+    "build:preview:android": "eas build --platform android --profile preview",
     "ios": "adb.exe devices && expo start --ios",
     "web": "adb.exe devices && expo start --web",
     "test": "jest --watchAll"
@@ -49,6 +51,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/iFTY-R/react-native-pro/tree/master/ExpoTsProject"
+    "url": "https://github.com/iFTY-R/react-native-pro.git",
+    "directory": "ExpoTsProject"
   }
 }
