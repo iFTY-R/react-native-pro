@@ -26,6 +26,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabOneScreen: 'one',
             },
           },
+          TabChatGPT: {
+            screens: {
+              TabChatGPTScreen: 'chatGPT',
+            },
+          },
           TabTwo: {
             screens: {
               TabTwoScreen: 'two',
@@ -34,6 +39,8 @@ const linking: LinkingOptions<RootStackParamList> = {
         },
       },
       Modal: 'modal',
+      // VideoDemo: 'card',
+      // ExpoVideoPlayerDemo: 'card',
       NotFound: '*',
     },
   }
